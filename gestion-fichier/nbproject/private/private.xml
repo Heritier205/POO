@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/herit/OneDrive/Documents/NetBeansProjects/gestion-fichier/src/gestion/fichier/Main.java</file>
+            <file>file:/C:/Users/herit/OneDrive/Documents/NetBeansProjects/gestion-fichier/src/gestion/fichier/metier/Fichier.java</file>
+            <file>file:/C:/Users/herit/OneDrive/Documents/NetBeansProjects/gestion-fichier/src/gestion/fichier/metier/Repertoire.java</file>
+            <file>file:/C:/Users/herit/OneDrive/Documents/NetBeansProjects/gestion-fichier/src/gestion/fichier/cli/CmQuitter.java</file>
+            <file>file:/C:/Users/herit/OneDrive/Documents/NetBeansProjects/gestion-fichier/src/gestion/fichier/metier/FichierSimple.java</file>
+            <file>file:/C:/Users/herit/OneDrive/Documents/NetBeansProjects/gestion-fichier/src/gestion/fichier/cli/CmTouch.java</file>
+            <file>file:/C:/Users/herit/OneDrive/Documents/NetBeansProjects/gestion-fichier/src/gestion/fichier/cli/ParseurCommande.java</file>
+            <file>file:/C:/Users/herit/OneDrive/Documents/NetBeansProjects/gestion-fichier/src/gestion/fichier/cli/CmMkdir.java</file>
+            <file>file:/C:/Users/herit/OneDrive/Documents/NetBeansProjects/gestion-fichier/src/gestion/fichier/cli/CmLs.java</file>
+            <file>file:/C:/Users/herit/OneDrive/Documents/NetBeansProjects/gestion-fichier/src/gestion/fichier/cli/Navigateur.java</file>
+            <file>file:/C:/Users/herit/OneDrive/Documents/NetBeansProjects/gestion-fichier/src/gestion/fichier/cli/CmCD.java</file>
+        </group>
+    </open-files>
+</project-private>
