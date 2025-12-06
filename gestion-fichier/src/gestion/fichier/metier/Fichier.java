@@ -18,9 +18,6 @@ import java.time.LocalDate;
  * @author herit
  */
 public abstract class Fichier implements Serializable{
-    @java.io.Serial
-    static final long serialVersionUID = -3387516993124229948L;
-    
     private static Repertoire root = new Repertoire("\\root", null);
     public static final String path = "C:\\Users\\herit\\Desktop\\MEGA\\Desktop\\NOTES\\SortiesJava\\gestion_fichiers.ser";
     private LocalDate dateCreation ; 

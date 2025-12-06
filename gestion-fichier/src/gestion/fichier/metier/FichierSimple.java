@@ -4,6 +4,7 @@
  */
 package gestion.fichier.metier;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,8 @@ import java.util.List;
  * @author herit
  */
 public class FichierSimple extends Fichier{
+    @Serial
+    static final long serialVersionUID = -3387516993124229948L;
     String donnee;
     
     public FichierSimple(){

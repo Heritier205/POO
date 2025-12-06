@@ -5,6 +5,7 @@
 package gestion.fichier.cli;
 
 import gestion.fichier.metier.Repertoire;
+import java.io.FileNotFoundException;
 
 /**
  *
@@ -12,25 +13,20 @@ import gestion.fichier.metier.Repertoire;
  */
 public class CmCD extends Commande{
     private String nom;
-    private Repertoire newRepCourant;
+    
     @Override
     public void executer() {
-        if(newRepCourant!=null){
-            Navigateur.getInstance().setRepertoireCourant(newRepCourant);
-        }else{
-            System.out.println("Repertoire non trouve !");
+        try {
+            Navigateur.getInstance().changeRepertoire(nom);
+        } catch (FileNotFoundException e){
+            System.out.println(e.getMessage());
         }
-   
+        
     }
 
     @Override
     public void setParametres(String[] paramatre) {
         this.nom = paramatre[0];
-        if(nom.equals("..")){
-            this.newRepCourant = (Repertoire) Navigateur.getInstance().getRepertoireCourrant().getRepertoireParent();
-        }else {
-            this.newRepCourant = (Repertoire) Navigateur.getInstance().getRepertoireCourrant().getRepertoire(nom);
-        }
     }
     
 }
