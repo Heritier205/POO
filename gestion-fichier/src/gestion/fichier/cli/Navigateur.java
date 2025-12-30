@@ -37,7 +37,7 @@ public class Navigateur {
     }
     
     public void changeRepertoire(String nom) throws FileNotFoundException{
-        if(nom == null){
+        if(nom == null  || nom.equals(".")){
             return;
         }
         String[] nomsRepertoire = nom.split("/");
@@ -60,4 +60,16 @@ public class Navigateur {
         }
     }
     
+    public Repertoire getRepertoireChemin(String Chemin)throws FileNotFoundException{
+        Repertoire home = this.repertoireCourrant;
+        
+        if(Chemin.isEmpty()){
+            return home;
+        }else{
+            this.instance.changeRepertoire(Chemin);
+            Repertoire cheminRep = this.getRepertoireCourrant();
+            this.setRepertoireCourant(home);
+            return cheminRep;
+        } 
+    }
 }
