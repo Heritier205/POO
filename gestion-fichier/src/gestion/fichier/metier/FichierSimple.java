@@ -21,6 +21,11 @@ public class FichierSimple extends Fichier{
         
     }
     
+    public FichierSimple(FichierSimple f){
+        super(f.getNom());
+        this.donnee = f.donnee;
+    }
+    
     @Override
     public int getTaille() {
         return donnee.length();

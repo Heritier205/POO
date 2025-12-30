@@ -5,22 +5,31 @@
 package gestion.fichier.cli;
 
 import gestion.fichier.metier.Repertoire;
+import java.io.FileNotFoundException;
 
 /**
  *
  * @author herit
  */
 public class CmLs extends Commande{
-//    private String nom;
+    private String chemin;
 
     @Override
     public void executer() {
-        Navigateur.getInstance().getRepertoireCourrant().AfficherContenu();
+        if(chemin != null){
+            try {
+                Navigateur.getInstance().getRepertoireChemin(chemin).AfficherContenu();
+            } catch (FileNotFoundException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }else{
+            Navigateur.getInstance().getRepertoireCourrant().AfficherContenu();
+        }
     }
 
     @Override
     public void setParametres(String[] paramatre) {
-//        this.nom = paramatre[0];
+        this.chemin = paramatre[0];
 
     }
     

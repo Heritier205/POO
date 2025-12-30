@@ -4,6 +4,7 @@
  */
 package gestion.fichier.metier;
 
+import gestion.fichier.cli.Navigateur;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -14,7 +15,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
- *
+ * 
  * @author herit
  */
 public abstract class Fichier implements Serializable{
@@ -40,8 +41,21 @@ public abstract class Fichier implements Serializable{
             this.repertoireParent.getFichiers().add(this);
         }
     }
+   
+    public Fichier(Fichier f, Repertoire repertoireParent){
+        this(f);
+        this.repertoireParent = repertoireParent;
+        if(this.repertoireParent != null){
+            this.repertoireParent.getFichiers().add(this);
+        }
+    }
     
-        public static void sauvegarder() throws Exception{
+    public Fichier(Fichier f){
+        this();
+        this.nom = f.nom;
+    }
+    
+    public static void sauvegarder() throws Exception{
         FileOutputStream fichier = new FileOutputStream(Fichier.path);
         ObjectOutputStream objectOtputStream = new ObjectOutputStream(fichier);
         objectOtputStream.writeObject(root);
@@ -85,4 +99,10 @@ public abstract class Fichier implements Serializable{
     public Repertoire getRepertoireParent(){
         return repertoireParent;
     }
+    
+    public void setRepertoirePaent(Repertoire rep){
+        this.repertoireParent = rep;
+    }
+    
+    
 }

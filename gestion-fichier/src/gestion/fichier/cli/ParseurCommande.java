@@ -34,6 +34,15 @@ public class ParseurCommande {
                 case "CD":
                     commande = new CmCD();
                     break;
+                case "CP":
+                    commande = new CmCp();
+                    break;
+                case "MV":
+                    commande = new CmMv();
+                    break;
+                case "RM":
+                    commande = new CmRm();
+                    break;
                 default:
                     commande = new CmInconnue();
         }
